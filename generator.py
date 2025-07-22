@@ -13,7 +13,6 @@ template = env.get_template("index.html")
 with open("src/data.yaml") as f:
     data = yaml.load(f.read(), Loader=yaml.Loader)
   
-print(data[0]['file_name'])
 rendered = template.render(data=data)
 
 with open("dist/index.html", "w") as w:
