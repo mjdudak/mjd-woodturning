@@ -1,0 +1,172 @@
+body {
+  background-color: #fbf7e9;
+}
+
+.header {
+  background-image: url('header_bg.jpg');
+  background-size: contain;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  padding-top: 0.25;
+  padding-bottom: 0.25;
+  font-family: 'Cinzel Decorative', serif;
+  color: #cccccc;
+}
+
+.subheader {
+  background-image: url('header_bg.jpg');
+  background-size: contain;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', serif;
+  color: #ccc;
+  letter-spacing: normal;
+  margin: auto;
+  padding: auto;
+  width: 100%;
+}
+
+.header h1 {
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+}
+
+.menu {
+  text-align: center;
+  font-weight: 400;
+  padding-top: 0em;
+  padding-bottom: 0.25em;
+}
+
+.menu-item a {
+  font-size: 0.75em;
+  font-family: 'Cinzel Decorative', serif;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.text-block p {
+  font-family: 'Forum', serif;
+  padding-top: 5em;
+  font-size: 1.25em;
+  height: 65vh;
+}
+
+.caption {
+  font-family: 'Forum', serif;
+  font-size: 1.25em;
+  margin: auto;
+  text-align: center;
+  width: 85%;
+  display: block;
+  color: black;
+}
+
+.caption-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  overflow: hidden;
+  height: 0;
+  transition: .5s ease;
+}
+
+.single-image:hover .caption-box {
+  height: 3em;
+}
+
+.single-image {
+  background-color: #ccc;
+  margin-bottom: 4.2vw;
+  position: relative;
+  a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .single-image {
+    padding: 0.33%;
+  }
+}
+
+.single-image img {
+  max-width: 95%;
+  margin: 0.5em;
+  max-height: 40vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+
+  &.light {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+.popup {
+  text-align: center;
+  background: #ccc;
+  border: 1px solid #666;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 1em;
+  margin: 0.5em 4em;
+
+  h2 {
+    margin-top: 0;
+    color: black;
+    font-family: "Forum", sans-serif;
+  }
+
+  img {
+    margin: auto;
+    height: 85vh;
+  }
+
+  .close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: all 200ms;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
