@@ -54,6 +54,14 @@ body {
   height: 65vh;
 }
 
+.profile-photo {
+  max-height: 65vh;
+  max-width: 85%;
+  display: block;
+  margin: auto;
+  margin-top: 4em;
+}
+
 .caption {
   font-family: 'Forum', serif;
   font-size: 1.25em;
