@@ -42,7 +42,7 @@
         <div class="pure-u-lg-3-4 pure-u-md-11-12 pure-u-1">
             <div class="pure-g">
                 {% for d in data %}
-                    <div class="pure-u-1 pure-u-lg-6-24 pure-u-md-11-24 single-image">
+                    <div class="pure-u-1 pure-u-lg-6-24 pure-u-md-11-24 single-image" id="{{ d.file_name }}_thumb">
                         <a href="#{{ d.file_name }}"><img src="images/{{ d.file_name }}">
                             <div class="caption-box">
                                 <span class="caption">{{ d.title }} ({{ d.species }}) <br>{{ d.month }} {{ d.year }}</span>
@@ -57,7 +57,7 @@
     {% for d in data %}
         <div class="overlay" id="{{ d.file_name }}">
             <div class="popup">
-                <a class="close" href="#work">&times;</a>
+                <a class="close" href="#{{ d.file_name }}_thumb">&times;</a>
                 <h2>{{ d.title }} ({{ d.species }}) <br>{{ d.month }} {{ d.year }}</h2>
                 <img src="images/{{ d.file_name }}">
             </div>
